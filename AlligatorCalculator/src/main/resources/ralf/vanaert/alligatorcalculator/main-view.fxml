@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ralf.vanaert.alligatorcalculator.Controller">
+
+  <TextField fx:id="input" onAction="#onTextChange">
+    <font>
+      <Font name="Arial " size="32.0"/>
+    </font>
+  </TextField>
+  <GridPane hgap="1" vgap="1" alignment="center" maxHeight="Infinity" >
+
+    <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+      <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+      <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+      <ColumnConstraints hgrow="ALWAYS" percentWidth="25"/>
+    </columnConstraints>
+
+    <rowConstraints>
+      <RowConstraints vgrow="ALWAYS" percentHeight="25"/>
+      <RowConstraints vgrow="ALWAYS" percentHeight="25"/>
+      <RowConstraints vgrow="ALWAYS" percentHeight="25"/>
+      <RowConstraints vgrow="ALWAYS" percentHeight="25"/>
+    </rowConstraints>
+
+    <Button text="7" focusTraversable="false" onAction="#press7" GridPane.columnIndex="0" GridPane.rowIndex="0" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="8" focusTraversable="false" onAction="#press8" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="9" focusTraversable="false" onAction="#press9" GridPane.columnIndex="2" GridPane.rowIndex="0" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="/" focusTraversable="false" onAction="#pressDivide" GridPane.columnIndex="3" GridPane.rowIndex="0" maxWidth="Infinity" maxHeight="Infinity"/>
+
+    <Button text="4" focusTraversable="false" onAction="#press4" GridPane.columnIndex="0" GridPane.rowIndex="1" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="5" focusTraversable="false" onAction="#press5" GridPane.columnIndex="1" GridPane.rowIndex="1" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="6" focusTraversable="false" onAction="#press6" GridPane.columnIndex="2" GridPane.rowIndex="1" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="*" focusTraversable="false" onAction="#pressMultiply" GridPane.columnIndex="3" GridPane.rowIndex="1" maxWidth="Infinity" maxHeight="Infinity"/>
+
+    <Button text="1" focusTraversable="false" onAction="#press1" GridPane.columnIndex="0" GridPane.rowIndex="2" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="2" focusTraversable="false" onAction="#press2" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="3" focusTraversable="false" onAction="#press3" GridPane.columnIndex="2" GridPane.rowIndex="2" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="-" focusTraversable="false" onAction="#pressSubstract" GridPane.columnIndex="3" GridPane.rowIndex="2" maxWidth="Infinity" maxHeight="Infinity"/>
+
+    <Button text="0" focusTraversable="false" onAction="#press0" GridPane.columnIndex="0" GridPane.rowIndex="3" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="." focusTraversable="false" onAction="#pressDecimal" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="=" focusTraversable="false" onAction="#pressEquals" GridPane.columnIndex="2" GridPane.rowIndex="3" maxWidth="Infinity" maxHeight="Infinity"/>
+    <Button text="+" focusTraversable="false" onAction="#pressAdd" GridPane.columnIndex="3" GridPane.rowIndex="3" maxWidth="Infinity" maxHeight="Infinity"/>
+
+  </GridPane>
+</VBox>
